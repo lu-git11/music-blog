@@ -1,0 +1,59 @@
+h1 {
+    color: rgb(54, 106, 151);
+}
+
+p {
+    font-size: 32px;
+}
+
+.container {
+    background-color: bisque;
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid rgb(54, 106, 151);
+    padding: 20px;
+}
+
+
+
+/* navbar */
+.navbar {
+    font-weight: bold;
+    background-color: rgb(54, 106, 151);
+}
+
+
+/* home page */
+
+.container-img {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+img {
+    width: 20%;   
+}
+
+
+.card {
+    background-color: beige;
+    width: 500px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* new post*/
+
+form {
+    height: auto;
+}
+
+.btn {
+    display: flex;
+    justify-self: center;
+    width: 200px;
+}
+

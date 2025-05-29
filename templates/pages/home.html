@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="container-home">
+    <h1>Home</h1>
+    <p>Welcome Home!</p>
+    <div class="container-img">
+        <p>Welcome to the House of Music. Turn up the tunes and share how the beats move you and inspire you.</p>
+        <img src="{% static 'img/headphones-solid.svg' %}" alt="">
+    </div>
+</div>
+{% endblock content %}
