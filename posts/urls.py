@@ -7,4 +7,6 @@ urlpatterns = [
     path("", views.PostListView.as_view(), name="list"),
     path("<int:pk>/", views.PostDetailView.as_view(), name="detail"),
     path("new/", views.PostCreateView.as_view(), name="new"),
+    path("<int:pk>/", views.DeleteView.as_view(), name="delete"),
+    path("<int:pk>/", views.UpdateView.as_view(), name="edit"),
 ]
