@@ -10,3 +10,4 @@ urlpatterns = [
     path("<int:pk>/", views.DeleteView.as_view(), name="delete"),
     path("<int:pk>/", views.UpdateView.as_view(), name="edit"),
 ]
+
