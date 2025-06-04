@@ -4,14 +4,14 @@
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
-<h1>Posts</h1>
+<h1>{{ title }} Posts</h1>
 {% for post in post_list %}
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{ post.title }}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{ post.subtitle }}</h6>
-    <p class="card-text">{{ post.author }}</p>
-    <p class="card-text">{{ post.body|truncatechars:128 }}</p>  
+  <div class="card-body lh-1">
+    <h5 class="card-title text-uppercase fs-1">{{ post.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary fs-3 text-capitalize">{{ post.subtitle }}</h6>
+    <p class="card-text fs-6">Created by: {{ post.author }}</p>
+    <p class="card-text fs-3">{{ post.body|truncatechars:128 }}...</p>  
     <a href="{% url 'detail' post.id %}" class="card-link">continue reading...</a>
   </div>
 </div>

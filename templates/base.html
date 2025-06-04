@@ -20,9 +20,13 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                     <a class="nav-link" href="{% url 'list' %}">Posts</a>
-                    <a class="nav-link" href="{% url 'new' %}">New Post</a>
                     <a class="nav-link" href="{% url 'about' %}">About</a>
+                    
                     {% if user.is_authenticated %}
+                    <a class="nav-link" href="{% url 'new' %}">New Posts</a>
+                    <a class="nav-link" href="{% url 'drafts' %}">Draft</a>
+                    <a class="nav-link" href="{% url 'archive' %}">Archive</a>
+                    <a class="nav-link" href="{% url 'password_change' %}">Change Password</a>
                     <form method="POST" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <input type="submit" class="nav-link" value="Log Out">

@@ -10,4 +10,5 @@
     {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Login">
 </form>
+<small>did you forget? <a href="{% url 'password_reset' %}">Click here</a> to reset</small>
 {% endblock content %}

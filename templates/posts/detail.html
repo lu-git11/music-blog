@@ -4,16 +4,18 @@
 {% block title %}{{ post.title }}{% endblock title %}
 
 {% block content %}
-<h1>{{ post.title }}</h1>
-<h3>{{ post.subtitle }}</h3>
-<p>{{ post.author }}</p>
+<h1 class="text-uppercase">{{ post.title }}</h1>
+<h3 class="text-capitalize">{{ post.subtitle }}</h3>
+<p class="fs-6">Created by: {{ post.author }}</p>
 <small>Created on : {{ post.created_on }}</small>
 <p>{{ post.body }}</p>
 
 {% if user.is_authenticated %}
     {% if user.username == post.author.username %}
-    <a class="btn btn-warning" href="{% url 'edit post.id %'}">Edit</a>
-    <a class="btn btn-danger" href="{% url 'delete' post.id %}">Delete</a>
-    {% endif %}
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-warning" href="{% url 'edit' post.id %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'delete' post.id %}">Delete</a>
+    </div>
+        {% endif %}
     {% endif %}
 {% endblock content %}
